@@ -25,7 +25,7 @@ class CoinDetailActivity : AppCompatActivity() {
         val fromSymbol = intent.getStringExtra(EXTRA_FROM_SYMBOL)
         if (fromSymbol != null) {
             viewModel.getDetailInfo(fromSymbol).observe(this, Observer {
-                    textViewPrice.text = "Цена: ${it.price}"
+                    textViewPrice.text = "Price: ${it.price}"
                     textViewMinDay.text = "Минимум за день: ${it.price}"
                     textViewMaxDay.text = "Максимум за день: ${it.price}"
                     textViewLastDeal.text = "Последняя сделка: Bitfinex"
